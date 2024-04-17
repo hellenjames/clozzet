@@ -1,4 +1,13 @@
+import { FiEye } from "react-icons/fi";
+import { RiEyeOffLine } from "react-icons/ri";
+import { useState } from "react";
+
 function Signups() {
+    const [showPassword, setshowPassword] = useState(true);
+    function handleShowPassword() {
+      setshowPassword((prev) => !prev);
+    }
+    
   return (
     <div className="flex flex-1 justify-between my-4 gap-3 ">
       <div className="flex flex-col justify-between mx-5">
@@ -30,13 +39,20 @@ function Signups() {
             placeholder="Phone Number"
           />
         </div>
-        <div className="flex justify-between">
-          <input
-            className="text-2xl border border-gray-300 rounded-full py-8 px-[9em] flex-1 outline-none "
-            type="text"
-            placeholder="Password"
-          />
-        </div>
+        <div
+             
+              className=" flex items-center border border-gray-300 rounded-full w-fit py-2  pr-4 mt-10 gap-3 justify-between"
+            >
+              <input
+                className=" outline-none flex-1 text-2xl py-5 px-[9em] bg-transparent  my-1"
+                type={showPassword?"password":"text"}
+                placeholder="Password"
+              />
+              <div  onClick={handleShowPassword} className="cursor-pointer">
+              {showPassword ?  <FiEye /> : 
+             <RiEyeOffLine />}
+              </div>
+            </div>
         <div className="flex justify-between">
           <input
             className="text-2xl border border-gray-300 rounded-full py-8 px-[9em] flex-1 outline-none"
@@ -57,7 +73,7 @@ function Signups() {
         </div>
 
         <div className="flex justify-center rounded-full items-center  border border-gray-300 py-8 px-[4em]  outline-none text-[blue] gap-5">
-          <img src="src/assets/images/google.png" width={50} />
+          <img src="src/assets/images/google-color-icon.png" width={50} />
           <button className="text-2xl">Sign Up With Google</button>
         </div>
         <div className="flex justify-between">

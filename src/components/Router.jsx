@@ -34,7 +34,7 @@ function Router() {
         <Route
           path="/shop"
           element={
-            <Layout>
+            <Layout cart={cart} setCart={setCart}>
               <Shop cart={cart} setCart={setCart}/>
             </Layout>
           }

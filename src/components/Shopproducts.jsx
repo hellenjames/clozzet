@@ -71,12 +71,13 @@ function Shopproducts({cart,setCart}) {
           <Shopproduct
             img={UnisexGraphicTshirt}
             name="UnisexGraphicTshirt"
-            price="Ksh 2,250"cart={cart} setCart={setCart}
+            price="Ksh 2,250" cart={cart} setCart={setCart}
           />
           <Shopproduct
             img={BlackBomberJacket}
             name="BlackBomberJacket"
             price="Ksh 2,250"cart={cart} setCart={setCart}
+            
           />
           <Shopproduct
             img={PleatedpallazoPants}

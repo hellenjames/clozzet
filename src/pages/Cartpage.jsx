@@ -1,9 +1,9 @@
 import Cartspage from "../components/Cartspage.jsx"
 
-function Cartpage(){
+function Cartpage({cart,setCart}){
     return(
         <div>
-            <Cartspage/>
+            <Cartspage cart={cart} setCart={setCart}/>
         </div>
     )
 }

@@ -14,8 +14,9 @@ function Nav({cart, setCart}) {
          <Link to="/shop" ><li className="hidden md:block">Shop</li></Link>
         </ul>
         <ul className="flex items-center   justify-between gap-5">
-          <li className="  size-7">
+          <li className="  size-7 relative ]">
             <Link to="/cart" ><CiShoppingCart className="cursor-pointer" size={30} /></Link>
+            <span className="w-[25px] h-[25px] absolute rounded-full top-[-10px] bg-emerald-500 right-[-8px] flex justify-center items-center">{cart?cart.length:0}</span>
           </li>
           <Link to="/signup"><li >Sign Up</li></Link>
          <Link to="/login"> <button className="border border-black py-3 px-[4em] rounded-full cursor-pointer">

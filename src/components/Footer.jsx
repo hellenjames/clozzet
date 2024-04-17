@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <footer className=" bg-neutral-100">
@@ -15,7 +17,7 @@ function Footer() {
       </div>
       <div className=" flex flex-col sm:flex-row justify-between gap-32 list-none my-9 leading-8">
         <div>
-          <img className=" text-center" src="src/assets/images/logo.svg" />
+          <Link to="/"><img className=" text-center" src="src/assets/images/logo.svg" /></Link>
           <p className="w-48">
             Offering a unique and stylish perspective on fashion is our number
             one priority. Confuse your mirror by our trendy outfits.

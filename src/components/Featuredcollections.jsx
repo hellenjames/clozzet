@@ -19,7 +19,7 @@ function Featuredcollections({cart,setCart}) {
           name="LeatherJacket"
           price="Ksh 2,250" cart={cart} setCart={setCart}
         />
-        <Featuredcollection img={Sweatshirt} name="Sweatshirt" price="Ksh 2,000" cart={cart} setccart={setcart}/>
+        <Featuredcollection img={Sweatshirt} name="Sweatshirt" price="Ksh 2,000" cart={cart} setCart={setCart}/>
         <Featuredcollection
           img={Pallazotrouser}
           name="Pallazotrouser"
