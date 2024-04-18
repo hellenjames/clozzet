@@ -36,7 +36,9 @@ function Aboutus() {
           dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
         </p>
       </div>
-      <div></div>
+      <div className="">
+
+      </div>
       <div></div>
       <div></div>
       <div>
