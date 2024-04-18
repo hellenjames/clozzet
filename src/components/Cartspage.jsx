@@ -1,6 +1,5 @@
-import Cartproduct from "./Cartproduct"
-function Cartspage({cart,setCart}) {
-  
+import Cartproduct from "./Cartproduct";
+function Cartspage({ cart, setCart }) {
   return (
     <div className=" container mx-auto flex justify-between gap-4">
       <div className="flex-1 border  ">
@@ -11,10 +10,17 @@ function Cartspage({cart,setCart}) {
         </div>
         <div>
           {cart.map((item) => {
-            return <Cartproduct price={item.price}
-            name={item.name}
-            size={item.size}
-            img={item.img}/>;
+            return (
+              <Cartproduct
+                price={item.price}
+                name={item.name}
+                size={item.size}
+                img={item.img}
+                cart = { cart }
+                setCart = { setCart }
+              />
+            );
+           
           })}
         </div>
       </div>

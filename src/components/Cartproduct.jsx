@@ -10,7 +10,10 @@ function Cartproduct({img,price,name,cart,}) {
     setCartCopy(prev=>[...prev,product])
   }
   else if(action==="decrement"){
-    
+    const cartCopyItems=[...cartCopy]
+    const cartItemindex=cartCopyItems.indexOf(product)
+    cartCopyItems.splice(cartItemindex,1)
+    setCartCopy(cartCopyItems)
   }
 }
   return (
@@ -24,7 +27,7 @@ function Cartproduct({img,price,name,cart,}) {
           </div>
         </div>
         <div className="flex h-10">
-          <p onClick={()=>handleCartActions()}className="border py-1 px-4">-</p>
+          <p onClick={()=>handleCartActions("decrement",{img,price,name})}className="border py-1 px-4">-</p>
           <p className="border py-1 px-4">{cartCopy.filter((item)=>item.name === name).length}</p>
           <p onClick={()=>handleCartActions("increment",{img,price,name})}className="border py-1 px-4" >+</p>
         </div>
