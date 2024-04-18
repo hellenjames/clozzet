@@ -36,8 +36,18 @@ function Aboutus() {
           dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
         </p>
       </div>
-      <div className="">
-
+      <div className="container mx-auto flex flex-col items-center gap-4 border bg-gray-100 w-[20%] h-[45vh]">
+        <img
+          className="bg-emerald-300 rounded-full"
+          src="src/assets/images/mission.png"
+          width={90}
+        />
+        <h2 className="text-2xl">Mission</h2>
+        <p className="mx-2">
+          To innovate, to lead, to enhance, to provide best-value products and
+          services to global customers  and enhance the quality of life for our
+          customers and employees.
+        </p>
       </div>
       <div></div>
       <div></div>

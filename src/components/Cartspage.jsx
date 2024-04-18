@@ -1,6 +1,6 @@
-import Cartproduct from "./Cartproduct";
-
+import Cartproduct from "./Cartproduct"
 function Cartspage({cart,setCart}) {
+  
   return (
     <div className=" container mx-auto flex justify-between gap-4">
       <div className="flex-1 border  ">
