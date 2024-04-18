@@ -36,12 +36,14 @@ function Aboutus() {
           dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
         </p>
       </div>
-      <div className="container mx-auto flex flex-col items-center gap-4 border bg-gray-100 w-[20%] h-[45vh]">
+      <div className="container mx-auto flex flex-col items-center gap-4 border content-fit bg-gray-100 w-[20%] h-[45vh]">
+        <div className="bg-emerald-300 w-[100%] h-[40%] rounded-full">
         <img
-          className="bg-emerald-300 rounded-full"
+          className=" flex items-center bg-emerald-300 rounded-full"
           src="src/assets/images/mission.png"
           width={90}
         />
+        </div>
         <h2 className="text-2xl">Mission</h2>
         <p className="mx-2">
           To innovate, to lead, to enhance, to provide best-value products and
@@ -49,8 +51,7 @@ function Aboutus() {
           customers and employees.
         </p>
       </div>
-      <div></div>
-      <div></div>
+      
       <div>
         <h2 className="text-3xl font-bold">Our History</h2>
         <p className="leadind-[2em] text-2xl">
