@@ -12,14 +12,15 @@ import About from "../pages/About";
 import { useState } from "react";
 function Router() {
   const[cart,setCart]=useState([])
+  const[cartCopy,setCartCopy]=useState([])
   return (
     <BrowserRouter>
       <Routes>
         <Route
           path="/"
           element={
-            <Layout cart={cart} setCart={setCart}>
-              <Home cart={cart} setCart={setCart}/>
+            <Layout cart={cart} setCart={setCart} cartCopy={cartCopy} setCartCopy={setCartCopy}>
+              <Home cart={cart} setCart={setCart} cartCopy={cartCopy} setCartCopy={setCartCopy}/>
             </Layout>
           }
         />
@@ -34,8 +35,8 @@ function Router() {
         <Route
           path="/shop"
           element={
-            <Layout cart={cart} setCart={setCart}>
-              <Shop cart={cart} setCart={setCart}/>
+            <Layout cart={cart} setCart={setCart} cartCopy={cartCopy} setCartCopy={setCartCopy}>
+              <Shop cart={cart} setCart={setCart} cartCopy={cartCopy} setCartCopy={setCartCopy}/>
             </Layout>
           }
         ></Route>
@@ -67,7 +68,7 @@ function Router() {
         path="/cart"
         element={
           <Layout>
-            <Cartpage cart={cart} setCart={setCart}/>
+            <Cartpage cart={cart} setCart={setCart} cartCopy={cartCopy} setCartCopy={setCartCopy}/>
           </Layout>
         }
         ></Route>

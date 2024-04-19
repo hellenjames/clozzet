@@ -1,5 +1,5 @@
 import Cartproduct from "./Cartproduct";
-function Cartspage({ cart, setCart }) {
+function Cartspage({ cart, setCart,subtotal,cartCopy,name }) {
   return (
     <div className=" container mx-auto flex justify-between gap-4">
       <div className="flex-1 border  ">
@@ -16,11 +16,11 @@ function Cartspage({ cart, setCart }) {
                 name={item.name}
                 size={item.size}
                 img={item.img}
-                cart = { cart }
-                setCart = { setCart }
+                cart={cart}
+                setCart={setCart}
+                
               />
             );
-           
           })}
         </div>
       </div>
@@ -38,10 +38,18 @@ function Cartspage({ cart, setCart }) {
             Apply
           </button>
         </div>
-        <div className="flex gap-5">
+         <div className="flex gap-5">
           <p>Subtotal</p>
-          <p>KSh 16,000</p>
-        </div>
+          <p>{`Ksh.${cartCopy((item)=>item.name=== name)
+            .reduce(
+              (acc, curr) =>
+                acc +
+                parseInt(curr.price.replace("Ksh", "").replace(" ,", "")),
+              0
+            )
+            .toLocaleString()}
+          }`}</p>
+        </div> 
         <div className="flex gap-6 border-b border-b-[#b0b0b0]">
           <p>Delivery Fee</p>
           <p>KSh 450</p>

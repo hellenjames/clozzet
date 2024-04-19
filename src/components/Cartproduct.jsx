@@ -1,6 +1,6 @@
 import { IoIosTrash } from "react-icons/io";
 import { useEffect, useState } from "react";
-function Cartproduct({ img, price, name, cart }) {
+function Cartproduct({ img, price, name, cart, subtotal }) {
   const [cartCopy, setCartCopy] = useState([]);
   useEffect(() => {
     cart && setCartCopy([...cart]);
@@ -45,13 +45,15 @@ function Cartproduct({ img, price, name, cart }) {
             +
           </button>
         </div>
+        
         <div className="flex">
           <p>
             {`Ksh.${cartCopy
               .filter((item) => item.name === name)
               .reduce(
                 (acc, curr) =>
-                  acc + parseInt(curr.price.replace("Ksh", "").replace(",", "")),
+                  acc +
+                  parseInt(curr.price.replace("Ksh", "").replace(",", "")),
                 0
               )
               .toLocaleString()}`}

@@ -37,7 +37,7 @@ function Aboutus() {
         </p>
       </div>
       <div className="container mx-auto flex flex-col items-center gap-4 border content-fit bg-gray-100 w-[20%] h-[45vh]">
-        <div className="bg-emerald-300 w-[100%] h-[40%] rounded-full">
+        <div className="bg-emerald-300 w-[30%] h-[20%] rounded-full items-center">
         <img
           className=" flex items-center bg-emerald-300 rounded-full"
           src="src/assets/images/mission.png"
